@@ -11,8 +11,8 @@ export class ClientsResp {
 
     toJson() {
         return {
-            success: this.success,
-            clients: this.clients
+            'success': this.success,
+            'clients': this.clients
         }
     }
 }
@@ -38,17 +38,17 @@ export class Clients {
 
     toJson() {
         return {
-            id: this.id,
-            name: this.name,
-            webhook_url: this.webhook_url,
-            webhook_secret_masked: this.webhook_secret_masked,
-            has_webhook_secret: this.has_webhook_secret,
-            min_confirmations: this.min_confirmations,
-            sweep_wallet: this.sweep_wallet,
-            payout_method: this.payout_method,
-            qvapay_account: this.qvapay_account,
-            zelle_contact: this.zelle_contact,
-            created_at: this.created_at
+            'id': this.id,
+            'name': this.name,
+            'webhook_url': this.webhook_url,
+            'webhook_secret_masked': this.webhook_secret_masked,
+            'has_webhook_secret': this.has_webhook_secret,
+            'min_confirmations': this.min_confirmations,
+            'sweep_wallet': this.sweep_wallet,
+            'payout_method': this.payout_method,
+            'qvapay_account': this.qvapay_account,
+            'zelle_contact': this.zelle_contact,
+            'created_at': this.created_at
         }
     }
 }

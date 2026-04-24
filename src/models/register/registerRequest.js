@@ -14,11 +14,11 @@ export class RegisterRequest {
 
     toJson() {
         return {
-            name: this.name,
-            webhook_url: this.webhook_url,
-            webhook_secret: this.webhook_secret,
-            payout_method: this.payout_method,
-            sweep_wallet: this.sweep_wallet,
+            'name': this.name,
+            'webhook_url': this.webhook_url,
+            'webhook_secret': this.webhook_secret,
+            'payout_method': this.payout_method,
+            'sweep_wallet': this.sweep_wallet,
         }
     }
 }

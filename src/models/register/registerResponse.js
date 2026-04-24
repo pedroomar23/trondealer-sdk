@@ -11,8 +11,8 @@ export class RegisterResponse {
 
     toJson() {
         return {
-            success: this.success,
-            client: this.client
+            'success': this.success,
+            'client': this.client
         }
     }
 }
@@ -39,17 +39,17 @@ class Client {
 
     toJson() {
         return {
-            id: this.id, 
-            name: this.name, 
-            api_key: this.api_key,
-            webhook_url: this.webhook_url,
-            min_confirmations: this.min_confirmations,
-            sweep_wallet: this.api_key.sweep_wallet,
-            payout_method: this.payout_method,
-            qvapay_account: this.qvapay_account,
-            zelle_contact: this.zelle_contact,
-            isActive: this.isActive,
-            created_at: this.api_key.created_at
+            'id': this.id, 
+            'name': this.name, 
+            'api_key': this.api_key,
+            'webhook_url': this.webhook_url,
+            'min_confirmations': this.min_confirmations,
+            'sweep_wallet': this.api_key.sweep_wallet,
+            'payout_method': this.payout_method,
+            'qvapay_account': this.qvapay_account,
+            'zelle_contact': this.zelle_contact,
+            'isActive': this.isActive,
+            'created_at': this.api_key.created_at
         }
     }
 }

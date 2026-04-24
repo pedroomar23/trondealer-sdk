@@ -1,20 +1,18 @@
 # TrondealerSdk 
 `TrondealerSdk` es un sdk escrito en JavaScript que trabaja con la API de [Trondealer](https://trondealer.com). 
 
-## Instalación
+## Instalación de dependencias
 
-### Instalación de dependencias
-
-```bash
+```javascript
 npm install
 ```
 
-### Instalación de sdk
+## Instalación de SDK
 
-```bash
+```javascript
 npm install trondealer-sdk
 ```
 
 ## Uso
 
-### Inicialización
+## Inicialización
