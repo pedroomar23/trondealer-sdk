@@ -46,7 +46,6 @@ const webhookConfirmed = new WebHookConfirmedReq.toString();
 ```
 
 ## Funciones 
-```javascript
     - Register 
     - Clients 
     - Add Wallet 
@@ -54,9 +53,8 @@ const webhookConfirmed = new WebHookConfirmedReq.toString();
     - Transactions 
     - WebHook Incoming 
     - WebHook Confirmed
-```
 
-## Ejemplo 
+## Ejemplos
 ```javascript
 import { TrondealerSdk } from 'trondealer-sdk'; 
 
