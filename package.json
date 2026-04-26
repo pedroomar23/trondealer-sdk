@@ -2,14 +2,22 @@
   "name": "trondealersdk",
   "version": "1.0.0",
   "description": "TrondealerSdk es un sdk escrito en JavaScript que trabaja con la api de Trondealer",
-  "main": "index.js",
+  "main": "src/core/api/api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    
+      "trondealer",
+      "trondealersdk",
+      "trondealer-sdk",
+      "trondealer-api",
+      "trondealer-api-sdk"
   ],
   "author": "Pedro Omar",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "MIT",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedroomar23/trondealersdk-python.git"
+  }
 }
