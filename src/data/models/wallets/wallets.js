@@ -1,11 +1,7 @@
 // Wallet Request
 export class WalletRequest {
-    constructor(data) {
-        this.label = data.label || ""
-    }
-
-    static fromJson(data) {
-        return new WalletRequest(data);
+    constructor(label) {
+        this.label = label || ""
     }
 
     toJson() {
@@ -13,38 +9,38 @@ export class WalletRequest {
             'label': this.label
         }
     }
+
+    toString() {
+        return JSON.stringify(this.toJson());
+    }
 }
 
 // Wallet Response 
 export class WalletResponse {
-    constructor(data) {
-        this.success = Boolean(data.success),
-        this.wallet = Wallet(data.wallet)
-    }
-
-    static fromJson(data) {
-        return new WalletResponse(data);
+    constructor(success, wallet) {
+        this.success = Boolean(success),
+        this.wallet = new Wallet.toString(wallet);
     }
 
     toJson() {
         return {
             'success': this.success,
-            'wallet': this.wallet
+            'wallet': this.wallet.toString()
         }
+    }
+
+    toString() {
+        return JSON.stringify(this.toJson());
     }
 }
 
 class Wallet {
-    constructor(data) {
-        this.id = data.id || "",
-        this.address = data.address || "",
-        this.label = data.label || "",
-        this.status = data.status || "",
-        this.created_at = data.created_at || Date()
-    }
-
-    static fromJson(data) {
-        return new Wallet(data);
+    constructor(id, address, label, status, created_at) {
+        this.id = id || "",
+        this.address = address || "",
+        this.label = label || "",
+        this.status = status || "",
+        this.created_at = created_at || Date()
     }
 
     toJson() {
@@ -55,5 +51,9 @@ class Wallet {
             'status': this.status,
             'created_at': this.created_at
         }
+    }
+
+    toString() {
+        return JSON.stringify(this.toJson());
     }
 }

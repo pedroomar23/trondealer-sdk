@@ -1,13 +1,15 @@
 {
   "name": "trondealersdk",
   "version": "1.0.0",
-  "description": "",
+  "description": "TrondealerSdk es un sdk escrito en JavaScript que trabaja con la api de Trondealer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    
+  ],
+  "author": "Pedro Omar",
   "license": "ISC",
   "type": "commonjs"
 }

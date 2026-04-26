@@ -1,12 +1,12 @@
 // Wallet Balance 
 // Request and Response 
 export class WalletBalanceReq {
-    constructor(data) {
-        this.address = data.address || ""
+    constructor(address) {
+        this.address = address || ""
     }
 
-    static fromJson(data) {
-        return new WalletBalanceReq(data);
+    static fromJson(address) {
+        return new WalletBalanceReq(address || "");
     }
 
     toJson() {
@@ -14,39 +14,39 @@ export class WalletBalanceReq {
             'address': this.address
         }
     }
+
+    toString() {
+        return JSON.stringify(this.toJson());
+    }
 }
 
 // Wallet Balance Response 
 export class WalletBalanceResp {
-    constructor(data) {
-        this.success = Boolean(data.success)
-        this.wallet = Wallet(data.wallet)
-        this.balances = Balance(this.balances)
-    }
-
-    static fromJson(data) {
-        return new WalletBalanceResp(data);
+    constructor(success, wallet, balances) {
+        this.success = Boolean(success)
+        this.wallet = new Wallet.toString(wallet)
+        this.balances = new Balance.toString(balances)
     }
 
     toJson() {
         return {
             'success': this.success,
-            'wallet': this.wallet,
-            'balances': this.balances
+            'wallet': this.wallet.toString(),
+            'balances': this.balances.toString()
         }
+    }
+
+    toString() {
+        return JSON.stringify(this.toJson());
     }
 }
 
 // Wallet 
 class Wallet {
-    constructor(data) {
-        this.address = data.address || "",
-        this.label = data.label || "",
-        this.status = data.status || ""
-    }
-
-    static fromJson(data) {
-        return new Wallet(data);
+    constructor(address, label, status) {
+        this.address = address || "",
+        this.label = label || "",
+        this.status = status || ""
     }
 
     toJson() {
@@ -56,18 +56,18 @@ class Wallet {
             'status': this.status
         }
     }
+
+    toString() {
+        return JSON.stringify(this.toJson());
+    }
 }
 
 // Balance
 class Balance {
-    constructor(data) {
-        this.nativeToken = data.nativeToken || "",
-        this.usdt = data.usdt || "",
-        this.usdc = data.usdc || ""
-    }
-
-    static fromJson(data) {
-        return new Balance(data);
+    constructor(nativeToken, usdt, usdc) {
+        this.nativeToken = nativeToken || "",
+        this.usdt = usdt || "",
+        this.usdc = usdc || ""
     }
 
     toJson() {
@@ -76,5 +76,9 @@ class Balance {
             'USDT': this.usdt,
             'USDC': this.usdc
         }
+    }
+
+    toString() {
+        return JSON.stringify(this.toJson());
     }
 }
